@@ -57,19 +57,19 @@ def get_data():
             **financial_data
         }
         # Writing stock data to a JSON file
-        with open('stock_holder_data.json', 'w') as f:
+        with open('Lai_stock_holder_data.json', 'w') as f:
             json.dump(stock, f,indent=4)
         # Writing stock data to a CSV file with aligned values
         df = pd.DataFrame(list(stock.items()),columns=['Data','Value'])
-        df.to_csv('stock_holder_data.csv', index=False)
+        df.to_csv('Lai_stock_holder_data.csv', index=False)
         # Writing stock data to an Excel file 
-        df.to_excel('stock_holder_data.xlsx', index=False)
+        df.to_excel('Lai_stock_holder_data.xlsx', index=False)
 
         path = os.getcwd()
         print("Download links:")
-        print(f"JSON: {path}\\stock_holder_data.json")
-        print(f"CSV: {path}\\stock_holder_data.csv")
-        print(f"XLSX: {path}\\stock_holder_data.xlsx")
+        print(f"JSON: {path}\\Lai_stock_holder_data.json")
+        print(f"CSV: {path}\\Lai_stock_holder_data.csv")
+        print(f"XLSX: {path}\\Lai_stock_holder_data.xlsx")
 
         return stock
     else:
